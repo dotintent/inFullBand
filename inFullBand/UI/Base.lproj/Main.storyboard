@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qie-Fx-tcJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5wh-PZ-yt5">
+            <objects>
+                <navigationController id="qie-Fx-tcJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Mm5-Lh-cSa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aE8-3a-nuo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUQ-Re-OyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1326" y="121"/>
+        </scene>
+        <!--Activity-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MiBand" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7pQ-Zu-wmQ">
+                                <rect key="frame" x="0.0" y="116" width="375" height="382"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="ActivityTableViewCell" id="bgV-vP-WI4" customClass="ActivityTableViewCell" customModule="MiBand" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bgV-vP-WI4" id="OIv-t1-UnG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fg-aF-thm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="59.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="9Jj-d0-Yh2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wex-i5-iNg">
+                                                    <rect key="frame" x="50" y="8" width="309" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq7-QR-Trb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meK-4L-MWq">
+                                                            <rect key="frame" x="0.0" y="22" width="309" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="0.32974913895848285" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wex-i5-iNg" firstAttribute="top" secondItem="OIv-t1-UnG" secondAttribute="top" constant="8" id="Zbv-Tg-Ywa"/>
+                                                <constraint firstItem="7Fg-aF-thm" firstAttribute="leading" secondItem="OIv-t1-UnG" secondAttribute="leading" id="c88-S7-2TJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wex-i5-iNg" secondAttribute="trailing" constant="16" id="iTk-yk-cHA"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wex-i5-iNg" secondAttribute="bottom" constant="8" id="l4W-KA-zkx"/>
+                                                <constraint firstItem="7Fg-aF-thm" firstAttribute="top" secondItem="OIv-t1-UnG" secondAttribute="top" id="l8a-Qx-Pa7"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Fg-aF-thm" secondAttribute="bottom" id="oh6-6f-yov"/>
+                                                <constraint firstItem="Wex-i5-iNg" firstAttribute="leading" secondItem="7Fg-aF-thm" secondAttribute="trailing" id="x8a-Lu-gxf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="7Fg-aF-thm" id="gCV-On-Nyf"/>
+                                            <outlet property="subtitleLabel" destination="meK-4L-MWq" id="6Z9-DR-YkS"/>
+                                            <outlet property="titleLabel" destination="Hq7-QR-Trb" id="dDq-iM-TW9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="SimpleActivityTableViewCell" id="Bp5-AI-0Lq" customClass="ActivityTableViewCell" customModule="MiBand" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bp5-AI-0Lq" id="Jdo-Ap-OKY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51s-z1-OzK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="59.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="OsJ-D9-KBe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-lu-xjF">
+                                                    <rect key="frame" x="50" y="8" width="309" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DEb-lu-xjF" firstAttribute="leading" secondItem="51s-z1-OzK" secondAttribute="trailing" id="5lg-Kx-DEb"/>
+                                                <constraint firstAttribute="bottom" secondItem="DEb-lu-xjF" secondAttribute="bottom" constant="8" id="PeR-bV-KhX"/>
+                                                <constraint firstAttribute="bottom" secondItem="51s-z1-OzK" secondAttribute="bottom" id="WR3-x9-rAd"/>
+                                                <constraint firstItem="DEb-lu-xjF" firstAttribute="top" secondItem="Jdo-Ap-OKY" secondAttribute="top" constant="8" id="dKy-yc-yoz"/>
+                                                <constraint firstAttribute="trailing" secondItem="DEb-lu-xjF" secondAttribute="trailing" constant="16" id="k1H-8s-eTk"/>
+                                                <constraint firstItem="51s-z1-OzK" firstAttribute="leading" secondItem="Jdo-Ap-OKY" secondAttribute="leading" id="n7O-a2-4mo"/>
+                                                <constraint firstItem="51s-z1-OzK" firstAttribute="top" secondItem="Jdo-Ap-OKY" secondAttribute="top" id="tBq-9t-IBb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="51s-z1-OzK" id="2Uo-GQ-OwT"/>
+                                            <outlet property="titleLabel" destination="DEb-lu-xjF" id="Jy6-Fx-s7i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQ6-Il-eYx" userLabel="Actions View">
+                                <rect key="frame" x="0.0" y="498" width="375" height="169"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="qRU-gP-rYl">
+                                        <rect key="frame" x="6" y="7" width="363" height="155"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-Bg-vDw">
+                                                <rect key="frame" x="0.0" y="0.0" width="363" height="47"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRm-i4-iPL" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="🌎"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Discover"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="discoverButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDn-rV-Fbm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5de-qG-ku0" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="123" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Disconnect"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="❌"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="disconnectButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7a3-Cu-jVW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzx-S2-l9w" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="246" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Update stats"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="📶"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="updateButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="uL1-aG-kdL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7pa-Fd-QLd">
+                                                <rect key="frame" x="0.0" y="54" width="363" height="47"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybf-Yz-Wcd" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="💚"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="On"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="startMonitoringHeartRateButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KgW-ev-aq1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3F-0h-M2u" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="123" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="❤️"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Off"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="stopMonitoringHeartRateButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Acw-ZG-b9p"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnW-GO-tg5" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="246" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="💛"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Measure"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="measureHeartRateButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITd-mN-UbM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="kHL-2X-4du">
+                                                <rect key="frame" x="0.0" y="108" width="363" height="47"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMk-jA-SiM" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="📱"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Alert"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="callNotificationButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCF-iC-iUT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-y0-DYK" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="123" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="✉️"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Alert"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="textNotificationButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="vji-Ra-YCa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-dQ-4aq" customClass="ActionButton" customModule="MiBand" customModuleProvider="target">
+                                                        <rect key="frame" x="246" y="0.0" width="117" height="47"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="emojiText" value="❕"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Clear alert"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clearNotificationButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="lor-bk-mKp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qRU-gP-rYl" firstAttribute="top" secondItem="xQ6-Il-eYx" secondAttribute="top" constant="7" id="2Ps-6L-HIm"/>
+                                    <constraint firstItem="qRU-gP-rYl" firstAttribute="leading" secondItem="xQ6-Il-eYx" secondAttribute="leading" constant="6" id="NXN-ja-QvD"/>
+                                    <constraint firstAttribute="trailing" secondItem="qRU-gP-rYl" secondAttribute="trailing" constant="6" id="mhy-YP-qxL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xQ6-Il-eYx" firstAttribute="top" secondItem="7pQ-Zu-wmQ" secondAttribute="bottom" id="4g3-pj-IXr"/>
+                            <constraint firstAttribute="bottom" secondItem="xQ6-Il-eYx" secondAttribute="bottom" id="CiO-dz-5tw"/>
+                            <constraint firstItem="7pQ-Zu-wmQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FKV-1Y-HmM"/>
+                            <constraint firstItem="7pQ-Zu-wmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ori-iZ-6ov"/>
+                            <constraint firstItem="xQ6-Il-eYx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bFk-6h-Rk0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qRU-gP-rYl" secondAttribute="bottom" constant="7" id="jui-5O-uGm"/>
+                            <constraint firstItem="7pQ-Zu-wmQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k8k-PN-dOx"/>
+                            <constraint firstItem="xQ6-Il-eYx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xgf-aH-NL3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Activity" id="tQF-mk-5S4"/>
+                    <connections>
+                        <outlet property="tableView" destination="7pQ-Zu-wmQ" id="Ajn-xb-pb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442.39999999999998" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+</document>
