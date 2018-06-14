@@ -16,7 +16,7 @@ class MiBandService: NSObject {
     // MARK: - Properties
 
     private let updatableIDs: [MiCharacteristicID] = [.dateTime, .activity, .battery]
-    private let monitoredIDs: [MiCharacteristicID] = [.heartRateMeasurement, .activity]
+    private let monitoredIDs: [MiCharacteristicID] = [.heartRateMeasurement, .activity, .deviceEvent]
 
     private var externalLog: LoggerFuction
     private var externalSpecialLog: LoggerFuction
@@ -152,6 +152,10 @@ class MiBandService: NSObject {
             let batteryPercentage = valueBytes[1]
             guard let lastChargeDateString = DateComponents.from(bytes: Array(valueBytes[11...17]))?.simpleDescription else { return }
             log("🔋", "Battery: ", "\(batteryPercentage) %, charged: \(lastChargeDateString)")
+
+        case .deviceEvent:
+            guard valueBytes.count >= 1, valueBytes[0] == DeviceEvent.buttonPressed else { return }
+            log("💡", "Button pressed")
 
         default:
             break

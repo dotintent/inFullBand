@@ -15,6 +15,7 @@ enum MiCharacteristicID: String {
     case heartRateControlPoint = "2A39"
     case battery = "00000006-0000-3512-2118-0009AF100700"
     case activity = "00000007-0000-3512-2118-0009AF100700"
+    case deviceEvent = "00000010-0000-3512-2118-0009AF100700"
 }
 
 struct AlertMode {
@@ -29,6 +30,12 @@ struct HeartRateReadingMode {
     static let sleep: UInt8 = 0x0
     static let continuous: UInt8 = 0x1
     static let manual: UInt8 = 0x2
+
+    private init() {}
+}
+
+struct DeviceEvent {
+    static let buttonPressed: UInt8 = 0x4
 
     private init() {}
 }
