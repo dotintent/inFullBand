@@ -72,7 +72,7 @@ class ActionButton: UIButton {
     private func setUp() {
 
         addSubview(backgroundView)
-        sendSubview(toBack: backgroundView)
+        sendSubviewToBack(backgroundView)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         backgroundView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
