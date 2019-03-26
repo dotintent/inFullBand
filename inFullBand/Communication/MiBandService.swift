@@ -79,7 +79,7 @@ class MiBandService: NSObject {
             errorLog("Start: Invalid setup!")
             return
         }
-        miBand.writeValue(Data(bytes: MiCommand.startHeartRateMonitoring), for: hrControlPoint, type: .withResponse)
+        miBand.writeValue(Data(MiCommand.startHeartRateMonitoring), for: hrControlPoint, type: .withResponse)
         log("❤️", "Start monitoring")
     }
 
@@ -88,8 +88,8 @@ class MiBandService: NSObject {
             errorLog("Stop: Invalid setup!")
             return
         }
-        miBand.writeValue(Data(bytes: MiCommand.stopHeartRateMonitoring), for: hrControlPoint, type: .withResponse)
-        miBand.writeValue(Data(bytes: MiCommand.stopHeartRateMeasurement), for: hrControlPoint, type: .withResponse)
+        miBand.writeValue(Data(MiCommand.stopHeartRateMonitoring), for: hrControlPoint, type: .withResponse)
+        miBand.writeValue(Data(MiCommand.stopHeartRateMeasurement), for: hrControlPoint, type: .withResponse)
         log("❤️", "Stop monitoring / measurement")
     }
 
@@ -98,7 +98,7 @@ class MiBandService: NSObject {
             errorLog("Single measurement: Invalid setup!")
             return
         }
-        miBand.writeValue(Data(bytes: MiCommand.startHeartRateMeasurement), for: hrControlPoint, type: .withResponse)
+        miBand.writeValue(Data(MiCommand.startHeartRateMeasurement), for: hrControlPoint, type: .withResponse)
         log("❤️", "Single measurement")
     }
 
@@ -107,7 +107,7 @@ class MiBandService: NSObject {
             errorLog("Set high alert: Invalid setup!")
             return
         }
-        miBand.writeValue(Data(bytes: [AlertMode.high]), for: alertCharacteristic, type: .withoutResponse)
+        miBand.writeValue(Data([AlertMode.high]), for: alertCharacteristic, type: .withoutResponse)
         log("📞", "Alert On")
     }
 
@@ -116,7 +116,7 @@ class MiBandService: NSObject {
             errorLog("Set mild alert: Invalid setup!")
             return
         }
-        miBand.writeValue(Data(bytes: [AlertMode.mild]), for: alertCharacteristic, type: .withoutResponse)
+        miBand.writeValue(Data([AlertMode.mild]), for: alertCharacteristic, type: .withoutResponse)
         log("✉️", "Alert On")
     }
 
@@ -125,7 +125,7 @@ class MiBandService: NSObject {
             errorLog("Unset alert: Invalid setup!")
             return
         }
-        miBand.writeValue(Data(bytes: [AlertMode.off]), for: alertCharacteristic, type: .withoutResponse)
+        miBand.writeValue(Data([AlertMode.off]), for: alertCharacteristic, type: .withoutResponse)
         log("❕", "Alert Off")
     }
 

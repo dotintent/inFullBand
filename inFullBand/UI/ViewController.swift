@@ -99,7 +99,7 @@ extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let peripheralIndex = selectableRowsIndexes.index(of: indexPath.row) else { return }
+        guard let peripheralIndex = selectableRowsIndexes.firstIndex(of: indexPath.row) else { return }
         miBandService.connectToPeripheral(at: peripheralIndex)
     }
 
