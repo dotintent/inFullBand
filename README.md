@@ -9,8 +9,8 @@ It enables some basic interaction between an iOS device and a Xiaomi Mi Band 2.
 
 - Device with iOS 11.1
 - Xiaomi Mi Band 2
-- Xcode 9.2
-- Swift 4.0
+- Xcode 10.2
+- Swift 5.0
 
 ## Usage
 
