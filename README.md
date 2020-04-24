@@ -14,14 +14,14 @@ It enables some basic interaction between an iOS device and a Xiaomi Mi Band 2.
 
 ## Usage
 
-1. Open inFullBand project in Xcode and set correct development team in in General section of project file.
-2. Make sure your that:  
+1. Open inFullBand project in Xcode and set correct development team in General section of project file.
+2. Make sure that:  
     a) Bluetooth is active on your iOS device,  
     b) Mi Band 2 is paired with your iOS device,  
     c) Mi Band 2 is "Discoverable" (details in aforementioned article).  
 3. Run project on your iOS device
 4. After brief moment you should see information "🌎 Discovered: MI Band 2" - press it to connect to your Mi Band.
-5. Have fun playing with heart rate monitoring, alerts and ohter functionalities available 😉
+5. Have fun playing with heart rate monitoring, alerts and other functionalities available 😉
 
 ## Screenshots
 
